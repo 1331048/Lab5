@@ -3,10 +3,14 @@
 
 namespace ShapeLibrary
 {
-	class ClosedPolyline
+	class ClosedPolyline : public OpenPolyline
 	{
-	
-
-
+	public:
+		ClosedPolyline(IWindowAPI & _window);
+		
+		void add(Point point);
+		void draw();
+	private:
+		Point premierPoint;
 	};
 }

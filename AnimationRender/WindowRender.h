@@ -6,10 +6,17 @@ using namespace ShapeLibrary;
 
 namespace WindowRender
 {
-	class WindowsRender
+	class WindowsRender 
 	{
+	public:
+		WindowsRender(IWindowAPI &windowAPI);
+		~WindowsRender();
+		void attach(Shape & _shape);
+		void render(); 
+		void putOnTop(Shape & p);
 	
-		
+		IWindowAPI * windowAPI;
+		vector <Shape*> Shapes;
 
 	};
 }
